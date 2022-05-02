@@ -1,8 +1,16 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { UserContext } from "./context";
+import { useState } from "react";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function BeesProject({ Component, pageProps }: AppProps) {
+  const [userName, setUserName] = useState<string>("");
+
+  return (
+    <UserContext.Provider value={{ userName, setUserName }}>
+      <Component {...pageProps} />
+    </UserContext.Provider>
+  );
 }
 
-export default MyApp
+export default BeesProject;
