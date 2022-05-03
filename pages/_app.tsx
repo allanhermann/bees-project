@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { UserContext } from "./context";
+import { UserContext } from "./context/userContext";
 import { useState } from "react";
 
 function BeesProject({ Component, pageProps }: AppProps) {
