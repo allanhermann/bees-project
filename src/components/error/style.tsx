@@ -22,6 +22,10 @@ export const ErrorContainer = styled.div`
 `;
 
 export const ErrorText = styled.text`
+  a {
+    color: red;
+  }
+
   font-size: ${toRem(30)}rem;
 
   @media (max-width: 1280px) {
