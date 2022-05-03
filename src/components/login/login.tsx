@@ -2,7 +2,7 @@ import { PageContainer, ImageContainer } from "./style";
 
 import Bee from "../../assets/Images/bee.png";
 import Image from "next/image";
-import { Form } from "./partials/form";
+import { Form } from "./partials/Form";
 
 export const Login = () => {
   return (
