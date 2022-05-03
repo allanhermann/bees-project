@@ -17,7 +17,7 @@ export const FormContainer = styled.div`
   gap: 1rem;
 
   @media (max-width: 600px) {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     justify-content: center;
     align-items: center;
   }
@@ -40,8 +40,8 @@ export const TextBox = styled.input`
   color: #71717a;
 
   @media (max-width: 600px) {
-    font-size: 0.5rem;
-    width: 50%;
+    font-size: 0.8rem;
+    width: 80%;
     height: ${toRem(21)}rem;
   }
 `;
@@ -80,7 +80,7 @@ export const Button = styled.button`
   }
 
   @media (max-width: 600px) {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     height: 50%;
   }
 `;
