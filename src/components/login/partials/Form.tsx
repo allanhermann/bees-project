@@ -51,18 +51,20 @@ export const Form = () => {
         placeholder="Full Name"
         onChange={handleTextChange}
         value={inputText}
+        id="textBox"
       />
 
       <CheckBox>
         <input
           type="checkbox"
           onChange={() => setInputCheckbox(!inputCheckbox)}
+          id="checkBox"
         />
 
         <Text>Are you older than 18 years old?</Text>
       </CheckBox>
 
-      <Button disabled={!buttonState} onClick={goToNextPage}>
+      <Button disabled={!buttonState} onClick={goToNextPage} id="button">
         Enter
       </Button>
     </FormContainer>
