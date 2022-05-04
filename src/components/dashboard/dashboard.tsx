@@ -7,7 +7,7 @@ import useSWR from "swr";
 import { useRouter } from "next/router";
 import { EmptyState } from "./partials/empty";
 import { Header } from "./partials/header";
-import { Breweries } from "./types/brewerie";
+import { Breweries } from "./types/breweries";
 
 export const Dashboard = () => {
   const router = useRouter();
@@ -24,10 +24,12 @@ export const Dashboard = () => {
   const [deletedCards, setDeletedCards] = useState<number>(0);
 
   const fetcher = (url: string) => axios.get(url).then((res) => res.data);
+
   const { data, error } = useSWR(
     "https://api.openbrewerydb.org/breweries",
     fetcher
   );
+
   useEffect(() => {
     setBreweries(data);
     setTotalCards(data?.length + 1);
@@ -52,6 +54,7 @@ export const Dashboard = () => {
   return (
     <PageContainer>
       <Header />
+
       <CardContainer>
         {breweries ? (
           breweries
@@ -73,6 +76,7 @@ export const Dashboard = () => {
           <Card id={0} title="Carregando..." passCardNumber={setChildNumber} />
         )}
       </CardContainer>
+
       {totalCards === deletedCards && <EmptyState />}
     </PageContainer>
   );
