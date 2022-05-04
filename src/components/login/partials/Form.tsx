@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../../../pages/context/userContext";
+import { UserContext } from "../../../context/userContext";
 import { FormContainer, Text, TextBox, CheckBox, Button } from "./style";
 
 export const Form = () => {

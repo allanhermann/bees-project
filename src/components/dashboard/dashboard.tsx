@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../../pages/context/userContext";
+import { UserContext } from "../../context/userContext";
 import { Card } from "./partials/card";
 import { CardContainer, PageContainer } from "./style";
 import axios from "axios";

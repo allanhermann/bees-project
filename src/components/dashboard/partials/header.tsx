@@ -3,7 +3,7 @@ import Image from "next/image";
 import GoBack from "../../../assets/svg/go-back-arrow.svg";
 import { HeaderContainer, HeaderLink, HeaderText } from "./style";
 import { useContext } from "react";
-import { UserContext } from "../../../../pages/context/userContext";
+import { UserContext } from "../../../context/userContext";
 
 export const Header = () => {
   const { userName } = useContext(UserContext);
