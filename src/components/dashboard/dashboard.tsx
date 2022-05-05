@@ -2,14 +2,14 @@ import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/userContext";
 import { Card } from "./partials/card";
 import { CardContainer, PageContainer } from "./style";
-import axios from "axios";
-import useSWR from "swr";
 import { useRouter } from "next/router";
 import { EmptyState } from "./partials/empty";
 import { Header } from "./partials/header";
 import { Breweries } from "./types/breweries";
+import { getBreweries } from "../../hooks/getBreweries";
+import { LoadingState } from "./partials/loading";
 
-export const Dashboard = () => {
+const Dashboard = () => {
   const router = useRouter();
 
   const { userName } = useContext(UserContext);
@@ -23,12 +23,7 @@ export const Dashboard = () => {
   const [errorHandling, setErrorHandling] = useState<string>();
   const [deletedCards, setDeletedCards] = useState<number>(0);
 
-  const fetcher = (url: string) => axios.get(url).then((res) => res.data);
-
-  const { data, error } = useSWR(
-    "https://api.openbrewerydb.org/breweries",
-    fetcher
-  );
+  const { data, error } = getBreweries();
 
   useEffect(() => {
     setBreweries(data);
@@ -73,7 +68,7 @@ export const Dashboard = () => {
               />
             ))
         ) : (
-          <Card id={0} title="Carregando..." passCardNumber={setChildNumber} />
+          <LoadingState />
         )}
       </CardContainer>
 
@@ -81,3 +76,5 @@ export const Dashboard = () => {
     </PageContainer>
   );
 };
+
+export default Dashboard;
