@@ -50,7 +50,7 @@ const Dashboard = () => {
     <PageContainer>
       <Header />
 
-      <CardContainer>
+      <CardContainer id="cardContainer">
         {breweries ? (
           breweries
             .slice(0, numberOfCards)

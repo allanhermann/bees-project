@@ -160,3 +160,11 @@ export const EmptyImageContainer = styled.div`
   height: ${toRem(120)}rem;
   width: ${toRem(120)}rem;
 `;
+
+export const LoadingContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fffef0;
+`;

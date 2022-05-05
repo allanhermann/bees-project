@@ -11,12 +11,12 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <Link href="/login">
-        <HeaderLink>
+        <HeaderLink id="goBack">
           <Image src={GoBack} />
           <HeaderText>Go back</HeaderText>
         </HeaderLink>
       </Link>
-      <HeaderText>{userName}</HeaderText>
+      <HeaderText id="userName">{userName}</HeaderText>
     </HeaderContainer>
   );
 };

@@ -5,7 +5,7 @@ import Bee from "../../../assets/Images/bee.png";
 
 export const EmptyState = () => {
   return (
-    <EmptyContainer>
+    <EmptyContainer id="empty">
       <EmptyText>It seems like you run through all the Breweries!</EmptyText>
       <EmptyText>
         {<Link href="/login">Click here</Link>} to go back to the login page

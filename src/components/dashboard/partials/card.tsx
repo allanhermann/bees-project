@@ -56,8 +56,8 @@ export const Card = ({
   return (
     <>
       {!discardedComponent && (
-        <CardBody>
-          <TrashCan onClick={handleDeleteCard}>
+        <CardBody id="cardBody">
+          <TrashCan onClick={handleDeleteCard} id="trashCan">
             <Image src={Trash} />
           </TrashCan>
           <CardTitle>{title ?? "No title"}</CardTitle>
