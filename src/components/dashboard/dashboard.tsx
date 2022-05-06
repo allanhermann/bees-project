@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { EmptyState } from "./partials/empty";
 import { Header } from "./partials/header";
 import { Breweries } from "./types/breweries";
-import { getBreweries } from "../../hooks/getBreweries";
+import { useBreweries } from "../../hooks/useBreweries";
 import { LoadingState } from "./partials/loading";
 
 const Dashboard = () => {
@@ -23,7 +23,7 @@ const Dashboard = () => {
   const [errorHandling, setErrorHandling] = useState<string>();
   const [deletedCards, setDeletedCards] = useState<number>(0);
 
-  const { data, error } = getBreweries();
+  const { data, error } = useBreweries();
 
   useEffect(() => {
     setBreweries(data);

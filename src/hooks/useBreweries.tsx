@@ -1,7 +1,7 @@
 import axios from "axios";
 import useSWR from "swr";
 
-export const getBreweries = () => {
+export const useBreweries = () => {
   const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
   const { data, error } = useSWR(
