@@ -41,7 +41,6 @@ const Dashboard = () => {
     }
 
     if (errorHandling === "error") {
-      console.log(errorHandling);
       router.push("/error");
     }
   }, [errorHandling, userName, error]);
