@@ -1,6 +1,7 @@
+/// <reference types="cypress" />
+
 describe("Login Page", () => {
   it("should test the login page", () => {
-    //This first tests analyse if the Button continues disabled if the Textbox OR the Checkbox are not filled
     cy.visit("http://localhost:3000");
     cy.get("#checkBox").click();
     cy.get("#button").should("be.disabled");

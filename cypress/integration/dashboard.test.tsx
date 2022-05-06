@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe("Dashboard Page", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
@@ -22,7 +24,7 @@ describe("Dashboard Page", () => {
   it("should test the empty state", () => {
     //This test make sure the EmptyState is working as expected
     cy.wait("@breweries").then((xhr) => {
-      Cypress._.times(xhr.response.body.length, () => {
+      Cypress._.times(xhr.response?.body.length, () => {
         cy.get("#trashCan").click();
       });
     });
