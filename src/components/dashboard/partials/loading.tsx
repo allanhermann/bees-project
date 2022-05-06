@@ -5,7 +5,7 @@ import Loading from "../../../assets/svg/loading.svg";
 export const LoadingState = () => {
   return (
     <LoadingContainer id="loading">
-      <Image src={Loading} />
+      <Image src={Loading} alt="Loading..." />
     </LoadingContainer>
   );
 };

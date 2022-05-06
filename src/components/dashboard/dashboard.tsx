@@ -56,6 +56,7 @@ const Dashboard = () => {
             .slice(0, numberOfCards)
             .map((data: Breweries) => (
               <Card
+                key={cardId}
                 id={cardId}
                 title={data.name}
                 address={data.street}

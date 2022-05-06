@@ -11,7 +11,7 @@ export const EmptyState = () => {
         {<Link href="/login">Click here</Link>} to go back to the login page
       </EmptyText>
       <EmptyImageContainer>
-        <Image src={Bee} />
+        <Image src={Bee} alt="Bee" />
       </EmptyImageContainer>
     </EmptyContainer>
   );

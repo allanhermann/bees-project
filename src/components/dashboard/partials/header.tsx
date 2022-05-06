@@ -10,9 +10,9 @@ export const Header = () => {
 
   return (
     <HeaderContainer>
-      <Link href="/login">
+      <Link href="/login" passHref>
         <HeaderLink id="goBack">
-          <Image src={GoBack} />
+          <Image src={GoBack} alt="Go Back" />
           <HeaderText>Go back</HeaderText>
         </HeaderLink>
       </Link>

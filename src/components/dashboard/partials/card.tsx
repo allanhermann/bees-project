@@ -58,7 +58,7 @@ export const Card = ({
       {!discardedComponent && (
         <CardBody id="cardBody">
           <TrashCan onClick={handleDeleteCard} id="trashCan">
-            <Image src={Trash} />
+            <Image src={Trash} alt="Delete" />
           </TrashCan>
           <CardTitle>{title ?? "No title"}</CardTitle>
           <CardText>{address ?? "No address"}</CardText>
@@ -68,13 +68,13 @@ export const Card = ({
           <TagRow>
             {brewery && (
               <Tag>
-                <Image src={Chart} />
+                <Image src={Chart} alt="Type of Brewery" />
                 <CardText>{brewery}</CardText>
               </Tag>
             )}
             {postalCode && (
               <Tag>
-                <Image src={Location} />
+                <Image src={Location} alt="Location" />
                 <CardText>{postalCode}</CardText>
               </Tag>
             )}
@@ -82,7 +82,7 @@ export const Card = ({
           <TagRow>
             {telephone && (
               <Tag>
-                <Image src={Phone} />
+                <Image src={Phone} alt="Phone" />
                 <CardText>{telephone}</CardText>
               </Tag>
             )}
@@ -92,7 +92,7 @@ export const Card = ({
               }
               onClick={() => setClickAddMore(true)}
             >
-              <Image src={PlusSymbol} />
+              <Image src={PlusSymbol} alt="Add More" />
               {textAddMore == "" && clickAddMore ? (
                 <AddMore
                   type="text"
