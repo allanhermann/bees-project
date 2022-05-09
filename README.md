@@ -73,7 +73,7 @@ $ yarn dev
 
 And then run
 ```
-$ yarn cypress
+$ yarn cypress run
 ```
 
 ## Features
